@@ -380,15 +380,20 @@ body{
     font-family:"Cormorant Garamond", serif;
     font-size:70px;
     font-weight:500;
+    display:flex;
+    justify-content:center;
+    align-items:center;
+    gap:18px;
+    flex-wrap:nowrap; /* يمنع النزول لسطر تاني */
 }
 
 .footer-logo .name{
     color:#fff;
+    white-space:nowrap;
 }
 
 .footer-logo .gold{
     color:#caa24f;
-    margin:0 15px;
 }
 
 .footer-line{
@@ -499,18 +504,25 @@ body{
     padding:15px;
 }
 
-    .footer{
-        padding:45px 20px;
-        border-radius:28px 28px 0 0;
-    }
+  .footer{
+    padding:45px 20px;
+    border-radius:28px 28px 0 0;
+}
 
-    .footer-logo{
-        font-size:44px;
-    }
+.footer-logo{
+    font-size:34px;
+    gap:10px;
+    flex-wrap:nowrap;
+}
 
-    .footer-text{
-        font-size:14px;
-        letter-spacing:2px;
-    }
+.footer-line{
+    width:150px;
+}
+
+.footer-text{
+    font-size:13px;
+    letter-spacing:2px;
+    line-height:1.8;
+}
 
 }
