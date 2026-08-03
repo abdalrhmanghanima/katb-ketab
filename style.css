@@ -4,19 +4,24 @@
     box-sizing:border-box;
 }
 
+html{
+    scroll-behavior:smooth;
+}
+
 body{
     background:#f8f4eb;
     font-family:"Cormorant Garamond", serif;
+    overflow-x:hidden;
 }
 
 .hero{
     min-height:100vh;
-    padding-top:50px;
+    padding:70px 20px 40px;
 }
 
 .logo{
-    width:90%;
-    margin:auto;
+    width:100%;
+    text-align:center;
 }
 
 .logo h1{
@@ -30,7 +35,7 @@ body{
 }
 
 .card{
-    width:760px;
+    width:min(760px,92%);
     margin:70px auto;
     background:#fffdf8;
     border:2px solid #d2ba7c;
@@ -58,23 +63,22 @@ body{
     margin-bottom:50px;
 }
 
-/* الإطار الذهبي للصورة */
-
 .image-frame{
-    width:360px;
-    height:460px;
+    width:min(360px,100%);
+    aspect-ratio:3/4;
+    height:auto;
     margin:0 auto 50px;
     padding:10px;
     border:2px solid #d2ba7c;
     background:#fff;
-    overflow:hidden;   /* يمنع الصورة من الخروج برة الإطار */
+    overflow:hidden;
 }
 
 .couple-image{
     width:100%;
     height:100%;
     display:block;
-    object-fit:cover;  /* يخلي الصورة تملأ الإطار */
+    object-fit:cover;
     object-position:center;
 }
 
@@ -85,8 +89,22 @@ body{
     letter-spacing:5px;
     font-weight:400;
 }
+
+.arabic-duaa{
+    direction:rtl;
+    text-align:center;
+    font-size:34px;
+    color:#243126;
+    line-height:2;
+    letter-spacing:0;
+    margin-bottom:50px;
+    font-family:"Amiri", serif;
+}
+
+/* ================= Countdown ================= */
+
 .countdown-card{
-    width:760px;
+    width:min(760px,92%);
     margin:70px auto;
     background:#fffdf8;
     border:2px solid #d2ba7c;
@@ -105,13 +123,25 @@ body{
     border:1px solid #e2d3ad;
 }
 
-.count-title{
-    position:relative;
-    z-index:2;
-    font-size:38px;
+.arabic-title{
+    direction:rtl;
+    text-align:center;
+    font-family:"Amiri", serif;
+    font-size:42px;
+    color:#caa24f;
+    margin-bottom:15px;
+    font-weight:700;
+}
+
+.count-subtitle{
+    direction:rtl;
+    text-align:center;
+    font-family:"Amiri", serif;
+    font-size:28px;
+    color:#444;
     font-style:italic;
-    color:#4b4b4b;
     margin-bottom:70px;
+    line-height:1.8;
 }
 
 .countdown{
@@ -121,6 +151,7 @@ body{
     justify-content:center;
     align-items:center;
     gap:35px;
+    flex-wrap:wrap;
 }
 
 .time-box{
@@ -147,38 +178,10 @@ body{
     font-size:40px;
     margin-top:-30px;
 }
-.arabic-duaa{
-    direction: rtl;
-    text-align: center;
-    font-size: 34px;
-    color: #243126;
-    line-height: 2;
-    letter-spacing: 0;
-    margin-bottom: 50px;
-    font-family: "Amiri", serif;
-}
-.arabic-title{
-    direction: rtl;
-    text-align: center;
-    font-family: "Amiri", serif;
-    font-size: 42px;
-    color: #caa24f;   /* أصفر ذهبي */
-    margin-bottom: 15px;
-    font-weight: 700;
-}
+/* ================= Venue ================= */
 
-.count-subtitle{
-    direction: rtl;
-    text-align: center;
-    font-family: "Amiri", serif;
-    font-size: 28px;
-    color: #444;
-    font-style: italic;
-    margin-bottom: 70px;
-    line-height: 1.8;
-}
 .venue-card{
-    width:760px;
+    width:min(760px,92%);
     margin:70px auto;
     background:#fffdf8;
     border:2px solid #d2ba7c;
@@ -199,8 +202,9 @@ body{
 }
 
 .venue-image{
-    width:520px;
-    height:340px;
+    width:min(520px,100%);
+    aspect-ratio:16/10;
+    height:auto;
     margin:20px auto 35px;
     padding:10px;
     border:2px solid #d2ba7c;
@@ -254,8 +258,8 @@ body{
 }
 
 .info-text{
-    text-align:right;
     flex:1;
+    text-align:right;
     margin-right:20px;
 }
 
@@ -271,8 +275,11 @@ body{
     color:#222;
     font-family:"Amiri", serif;
 }
+
+/* ================= Location ================= */
+
 .location-card{
-    width:760px;
+    width:min(760px,92%);
     margin:70px auto;
     background:#fffdf8;
     border:2px solid #d2ba7c;
@@ -293,8 +300,6 @@ body{
 }
 
 .location-title{
-    position:relative;
-    z-index:2;
     font-family:"Amiri", serif;
     font-size:48px;
     color:#caa24f;
@@ -302,8 +307,6 @@ body{
 }
 
 .location-subtitle{
-    position:relative;
-    z-index:2;
     font-family:"Amiri", serif;
     font-size:28px;
     color:#444;
@@ -311,9 +314,7 @@ body{
 }
 
 .map-frame{
-    position:relative;
-    z-index:2;
-    width:600px;
+    width:min(600px,100%);
     height:380px;
     margin:auto;
     padding:10px;
@@ -330,15 +331,7 @@ body{
     border-radius:18px;
 }
 
-.map-frame img{
-    width:100%;
-    border-radius:18px;
-    display:block;
-}
-
 .map-btn{
-    position:relative;
-    z-index:2;
     display:inline-block;
     margin-top:30px;
     padding:18px 45px;
@@ -347,39 +340,46 @@ body{
     text-decoration:none;
     font-size:28px;
     border-radius:18px;
-    transition:.3s;
     font-family:"Amiri", serif;
+    transition:.35s;
+    box-shadow:0 10px 30px rgba(0,0,0,.15);
 }
 
 .map-btn:hover{
     background:#6a4328;
+    transform:translateY(-3px);
 }
+
+
 .footer{
-    background:#4b2f1d;
-    margin-top:80px;
+    width:100%;
+    margin:80px 0 0;
     padding:60px 20px;
+    background:#4b2f1d;
     text-align:center;
-    border-radius:80px 80px 0 0;
+
+    border-radius:40px 40px 0 0;
+
+    overflow:hidden;
 }
 
 .back-top{
+    display:inline-block;
     text-decoration:none;
     color:#fff;
     font-size:34px;
-    display:inline-block;
     margin-bottom:40px;
     transition:.3s;
 }
 
 .back-top:hover{
-    transform:translateY(-5px);
+    transform:translateY(-6px);
 }
 
 .footer-logo{
     font-family:"Cormorant Garamond", serif;
     font-size:70px;
     font-weight:500;
-    letter-spacing:2px;
 }
 
 .footer-logo .name{
@@ -401,7 +401,116 @@ body{
 .footer-text{
     color:#fff;
     letter-spacing:6px;
-    font-size:20px;
     text-transform:uppercase;
+    font-size:20px;
     line-height:1.8;
+}
+
+
+@media(max-width:768px){
+
+.hero{
+    padding-top:40px;
+}
+
+.logo h1{
+    font-size:42px;
+}
+
+.card,
+.countdown-card,
+.venue-card,
+.location-card{
+    width:92%;
+    padding:28px 18px;
+}
+
+.arabic-duaa{
+    font-size:24px;
+    line-height:1.8;
+}
+
+.date{
+    font-size:28px;
+}
+
+.arabic-title{
+    font-size:32px;
+}
+
+.count-subtitle{
+    font-size:20px;
+    margin-bottom:40px;
+}
+
+.countdown{
+    gap:18px;
+}
+
+.time-box span{
+    font-size:42px;
+}
+
+.time-box small{
+    font-size:14px;
+    letter-spacing:2px;
+}
+
+.dot{
+    display:none;
+}
+
+.venue-title,
+.location-title{
+    font-size:34px;
+}
+
+.location-subtitle{
+    font-size:20px;
+}
+
+.info-box{
+    width:100%;
+    padding:15px;
+}
+
+.icon{
+    width:48px;
+    height:48px;
+    font-size:22px;
+}
+
+.info-text span{
+    font-size:18px;
+}
+
+.info-text p{
+    font-size:18px;
+}
+
+.map-frame{
+    width:100%;
+    height:260px;
+}
+
+.map-btn{
+    width:100%;
+    font-size:20px;
+    padding:15px;
+}
+
+    .footer{
+        padding:45px 20px;
+        border-radius:28px 28px 0 0;
+    }
+
+    .footer-logo{
+        font-size:44px;
+    }
+
+    .footer-text{
+        font-size:14px;
+        letter-spacing:2px;
+    }
+
 }
