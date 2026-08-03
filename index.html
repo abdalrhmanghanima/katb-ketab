@@ -2,6 +2,7 @@
 <html lang="en">
 
 <head>
+
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
@@ -13,18 +14,23 @@
     <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@300;400;500;600;700&display=swap"
         rel="stylesheet">
 
+    <link href="https://fonts.googleapis.com/css2?family=Amiri:wght@400;700&display=swap"
+        rel="stylesheet">
+
     <link rel="stylesheet" href="welcome.css">
     <link rel="stylesheet" href="style.css">
+
 </head>
 
 <body>
 
-    <!-- الموسيقى -->
+    <!-- Background Music -->
     <audio id="bgMusic" loop>
         <source src="music/song.mp3" type="audio/mpeg">
     </audio>
 
-    <!-- شاشة البداية -->
+    <!-- ================= Welcome Screen ================= -->
+
     <section id="welcomeScreen" class="welcome">
 
         <p class="title">
@@ -32,7 +38,9 @@
             KETAB INVITATION
         </p>
 
-        <img src="images/logo.png" class="welcome-logo" alt="Tasneem & Waleed">
+        <img src="images/logo.png"
+             class="welcome-logo"
+             alt="Tasneem & Waleed">
 
         <p class="tap">
             — Tap Anywhere To Open —
@@ -40,233 +48,329 @@
 
     </section>
 
-    <!-- محتوى الدعوة -->
+    <!-- ================= Invitation ================= -->
+
     <main id="homePage" style="display:none;">
 
-       
+        <!-- Hero -->
 
-<section class="hero" id="top">
+        <section class="hero reveal" id="top">
 
-    <div class="logo">
-        <h1>T <span>&</span> W</h1>
-    </div>
+            <div class="logo stagger">
 
-    <div class="card">
+                <h1>
+                    T <span>&</span> W
+                </h1>
 
-        <p class="family arabic-duaa">
-            بَارَكَ اللَّهُ لَكُمَا، وَبَارَكَ عَلَيْكُمَا، وَجَمَعَ بَيْنَكُمَا فِي خَيْرٍ
-        </p>
+            </div>
 
-        <div class="image-frame">
-            <img src="images/couple.jpeg" class="couple-image" alt="">
-        </div>
+            <div class="card stagger">
 
-        <h3 class="date">
-            AUG 19TH, 2026
-        </h3>
+                <p class="family arabic-duaa stagger">
+                    بَارَكَ اللَّهُ لَكُمَا،
+                    وَبَارَكَ عَلَيْكُمَا،
+                    وَجَمَعَ بَيْنَكُمَا فِي خَيْرٍ
+                </p>
 
-    </div>
+                <div class="image-frame stagger">
 
-</section>
+                    <img src="images/couple.jpeg"
+                         class="couple-image"
+                         alt="Bride & Groom">
 
-<section class="countdown-card">
+                </div>
 
-    <p class="count-title arabic-title">
-        العَدُّ التَّنَازُلِيُّ
-    </p>
+                <h3 class="date stagger">
+                    AUG 19TH, 2026
+                </h3>
 
-    <p class="count-subtitle">
-        بِانْتِظَارِ اللَّحْظَةِ السَّعِيدَةِ الَّتِي يَجْمَعُنَا بِهَا الْقَدَرُ بِكُلِّ حُبٍّ...
-    </p>
+            </div>
 
-    <div class="countdown">
+        </section>
+                <!-- Countdown -->
 
-        <div class="time-box">
-            <span id="days">00</span>
-            <small>DAYS</small>
-        </div>
+        <section class="countdown-card reveal">
 
-        <div class="dot">•</div>
+            <p class="count-title arabic-title stagger">
+                العَدُّ التَّنَازُلِيُّ
+            </p>
 
-        <div class="time-box">
-            <span id="hours">00</span>
-            <small>HOURS</small>
-        </div>
+            <p class="count-subtitle stagger">
+                بِانْتِظَارِ اللَّحْظَةِ السَّعِيدَةِ الَّتِي يَجْمَعُنَا بِهَا الْقَدَرُ بِكُلِّ حُبٍّ...
+            </p>
 
-        <div class="dot">•</div>
+            <div class="countdown stagger">
 
-        <div class="time-box">
-            <span id="minutes">00</span>
-            <small>MINUTES</small>
-        </div>
+                <div class="time-box">
+                    <span id="days">00</span>
+                    <small>DAYS</small>
+                </div>
 
-        <div class="dot">•</div>
+                <div class="dot">•</div>
 
-        <div class="time-box">
-            <span id="seconds">00</span>
-            <small>SECONDS</small>
-        </div>
+                <div class="time-box">
+                    <span id="hours">00</span>
+                    <small>HOURS</small>
+                </div>
 
-    </div>
+                <div class="dot">•</div>
 
-</section>
+                <div class="time-box">
+                    <span id="minutes">00</span>
+                    <small>MINUTES</small>
+                </div>
 
-<section class="venue-card">
+                <div class="dot">•</div>
 
-    <div class="venue-image">
-        <img src="images/dar.jpeg" alt="">
-    </div>
+                <div class="time-box">
+                    <span id="seconds">00</span>
+                    <small>SECONDS</small>
+                </div>
 
-    <h2 class="venue-title">
-        دار المأذونية
-    </h2>
+            </div>
 
-    <div class="info-box">
-        <div class="icon">📍</div>
-        <div class="info-text">
-            <span>العنوان</span>
-            <p>شبين الكوم - بجوار مسجد المغفرة</p>
-        </div>
-    </div>
+        </section>
 
-    <div class="info-box">
-        <div class="icon">📅</div>
-        <div class="info-text">
-            <span>التاريخ</span>
-            <p>الأربعاء، 19 أغسطس 2026</p>
-        </div>
-    </div>
+        <!-- Venue -->
 
-    <div class="info-box">
-        <div class="icon">🕠</div>
-        <div class="info-text">
-            <span>الوقت</span>
-            <p>٥:٣٠ مساءً</p>
-        </div>
-    </div>
+        <section class="venue-card reveal">
 
-</section>
-<section class="location-card">
+            <div class="venue-image stagger">
 
-    <h2 class="location-title">
-        اللوكيشن
-    </h2>
+                <img src="images/dar.jpeg" alt="Wedding Hall">
 
-    <p class="location-subtitle">
-        لتسهيل وصولكم المباشر لدار المأذونية
-    </p>
+            </div>
 
-    <div class="map-frame">
+            <h2 class="venue-title stagger">
+                دار المأذونية
+            </h2>
 
-        <iframe
-            src="https://www.google.com/maps?q=دار%20المأذونية%20شبين%20الكوم&output=embed"
-            loading="lazy"
-            allowfullscreen>
-        </iframe>
+            <div class="info-box stagger">
 
-    </div>
+                <div class="icon">📍</div>
 
-    <a class="map-btn"
-       href="https://maps.app.goo.gl/nTZEZUTaYjSLnup59?g_st=ic"
-       target="_blank">
-        🗺️ فتح عبر خرائط Google
-    </a>
+                <div class="info-text">
 
-</section>
+                    <span>العنوان</span>
 
-<footer class="footer">
+                    <p>
+                        شبين الكوم - بجوار مسجد المغفرة
+                    </p>
 
-    <a href="#top" class="back-top">▲</a>
+                </div>
 
-    <h1 class="footer-logo">
-        <span class="name">Tasneem</span>
-        <span class="gold">&</span>
-        <span class="name">Waleed</span>
-    </h1>
+            </div>
 
-    <div class="footer-line"></div>
+            <div class="info-box stagger">
 
-    <p class="footer-text">
-        MADE WITH LOVE FOR AUGUST 19TH, 2026
-    </p>
+                <div class="icon">📅</div>
 
-</footer>
+                <div class="info-text">
 
-<script>
+                    <span>التاريخ</span>
 
-const weddingDate = new Date("August 19, 2026 17:30:00").getTime();
+                    <p>
+                        الأربعاء، 19 أغسطس 2026
+                    </p>
 
-function updateCountdown(){
+                </div>
+
+            </div>
+
+            <div class="info-box stagger">
+
+                <div class="icon">🕠</div>
+
+                <div class="info-text">
+
+                    <span>الوقت</span>
+
+                    <p>
+                        ٥:٣٠ مساءً
+                    </p>
+
+                </div>
+
+            </div>
+
+        </section>
+                <!-- Location -->
+
+        <section class="location-card reveal">
+
+            <h2 class="location-title stagger">
+                اللوكيشن
+            </h2>
+
+            <p class="location-subtitle stagger">
+                لتسهيل وصولكم المباشر لدار المأذونية
+            </p>
+
+            <div class="map-frame stagger">
+
+                <iframe
+                    src="https://www.google.com/maps?q=دار%20المأذونية%20شبين%20الكوم&output=embed"
+                    loading="lazy"
+                    allowfullscreen>
+                </iframe>
+
+            </div>
+
+            <a class="map-btn stagger"
+               href="https://maps.app.goo.gl/nTZEZUTaYjSLnup59?g_st=ic"
+               target="_blank">
+
+                🗺️ فتح عبر خرائط Google
+
+            </a>
+
+        </section>
+
+        <!-- Footer -->
+
+        <footer class="footer reveal">
+
+            <a href="#top" class="back-top stagger">
+                ▲
+            </a>
+
+            <h1 class="footer-logo stagger">
+                <span class="name">Tasneem</span>
+                <span class="gold">&</span>
+                <span class="name">Waleed</span>
+            </h1>
+
+            <div class="footer-line stagger"></div>
+
+            <p class="footer-text stagger">
+                MADE WITH LOVE FOR AUGUST 19TH, 2026
+            </p>
+
+        </footer>
+
+    </main>
+    <script>
+    const weddingDate = new Date("August 19, 2026 17:30:00").getTime();
+
+function updateCountdown() {
 
     const now = new Date().getTime();
     const distance = weddingDate - now;
 
-    if(distance <= 0){
+    if (distance <= 0) {
 
-        document.getElementById("days").innerHTML="00";
-        document.getElementById("hours").innerHTML="00";
-        document.getElementById("minutes").innerHTML="00";
-        document.getElementById("seconds").innerHTML="00";
+        document.getElementById("days").innerHTML = "00";
+        document.getElementById("hours").innerHTML = "00";
+        document.getElementById("minutes").innerHTML = "00";
+        document.getElementById("seconds").innerHTML = "00";
 
         return;
 
     }
 
-    const days=Math.floor(distance/(1000*60*60*24));
-    const hours=Math.floor((distance%(1000*60*60*24))/(1000*60*60));
-    const minutes=Math.floor((distance%(1000*60*60))/(1000*60));
-    const seconds=Math.floor((distance%(1000*60))/1000);
+    const days = Math.floor(distance / (1000 * 60 * 60 * 24));
+    const hours = Math.floor((distance % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60));
+    const minutes = Math.floor((distance % (1000 * 60 * 60)) / (1000 * 60));
+    const seconds = Math.floor((distance % (1000 * 60)) / 1000);
 
-    document.getElementById("days").innerHTML=days;
-    document.getElementById("hours").innerHTML=hours;
-    document.getElementById("minutes").innerHTML=minutes;
-    document.getElementById("seconds").innerHTML=seconds;
+    document.getElementById("days").innerHTML = days;
+    document.getElementById("hours").innerHTML = hours;
+    document.getElementById("minutes").innerHTML = minutes;
+    document.getElementById("seconds").innerHTML = seconds;
 
 }
 
 updateCountdown();
 
-setInterval(updateCountdown,1000);
+setInterval(updateCountdown, 1000);
 
+/* =============================
+   Welcome Screen
+============================= */
 
-</script>
+const screen = document.getElementById("welcomeScreen");
+const home = document.getElementById("homePage");
+const music = document.getElementById("bgMusic");
 
+let opened = false;
 
-    </main>
+screen.addEventListener("click", () => {
 
-    <script>
+    if (opened) return;
 
-        const screen = document.getElementById("welcomeScreen");
-        const home = document.getElementById("homePage");
-        const music = document.getElementById("bgMusic");
+    opened = true;
 
-        let opened = false;
+    music.play().catch(() => {});
 
-        screen.addEventListener("click", () => {
+    screen.classList.add("open");
 
-            if (opened) return;
-            opened = true;
+    setTimeout(() => {
 
-            music.play().catch(() => {});
+        screen.style.display = "none";
 
-            screen.classList.add("open");
+        home.style.display = "block";
 
-            setTimeout(() => {
-screen.style.display = "none";
+        requestAnimationFrame(() => {
 
-home.style.display = "block";
-
-document.body.style.overflow = "auto";
-
-location.hash = "home";
-
-window.scrollTo(0,0);
-
-            }, 1000);
+            home.classList.add("show");
 
         });
 
-    </script>
+        document.body.style.overflow = "auto";
+
+        location.hash = "home";
+
+        window.scrollTo({
+            top: 0,
+            behavior: "smooth"
+        });
+
+    }, 1200);
+
+});
+/* =============================
+   Scroll Reveal Animation
+============================= */
+
+const revealSections = document.querySelectorAll(".reveal");
+
+const observer = new IntersectionObserver((entries) => {
+
+    entries.forEach((entry) => {
+
+        if (entry.isIntersecting) {
+
+            entry.target.classList.add("active");
+
+        }
+
+    });
+
+}, {
+    threshold: 0.20
+});
+
+revealSections.forEach((section) => {
+
+    observer.observe(section);
+
+});
+
+/* =============================
+   Back To Top Smooth
+============================= */
+
+document.querySelector(".back-top").addEventListener("click", function (e) {
+
+    e.preventDefault();
+
+    window.scrollTo({
+        top: 0,
+        behavior: "smooth"
+    });
+
+});
+</script>
 
 </body>
 
