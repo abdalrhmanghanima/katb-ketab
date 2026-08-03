@@ -1,0 +1,407 @@
+*{
+    margin:0;
+    padding:0;
+    box-sizing:border-box;
+}
+
+body{
+    background:#f8f4eb;
+    font-family:"Cormorant Garamond", serif;
+}
+
+.hero{
+    min-height:100vh;
+    padding-top:50px;
+}
+
+.logo{
+    width:90%;
+    margin:auto;
+}
+
+.logo h1{
+    font-size:60px;
+    color:#243126;
+    letter-spacing:6px;
+}
+
+.logo span{
+    color:#caa24f;
+}
+
+.card{
+    width:760px;
+    margin:70px auto;
+    background:#fffdf8;
+    border:2px solid #d2ba7c;
+    padding:60px 40px;
+    position:relative;
+}
+
+.card::before{
+    content:"";
+    position:absolute;
+    top:15px;
+    left:15px;
+    right:15px;
+    bottom:15px;
+    border:1px solid #e2d3ad;
+    pointer-events:none;
+}
+
+.family{
+    text-align:center;
+    font-size:22px;
+    letter-spacing:8px;
+    color:#444;
+    line-height:1.8;
+    margin-bottom:50px;
+}
+
+/* الإطار الذهبي للصورة */
+
+.image-frame{
+    width:360px;
+    height:460px;
+    margin:0 auto 50px;
+    padding:10px;
+    border:2px solid #d2ba7c;
+    background:#fff;
+    overflow:hidden;   /* يمنع الصورة من الخروج برة الإطار */
+}
+
+.couple-image{
+    width:100%;
+    height:100%;
+    display:block;
+    object-fit:cover;  /* يخلي الصورة تملأ الإطار */
+    object-position:center;
+}
+
+.date{
+    text-align:center;
+    font-size:42px;
+    color:#785a15;
+    letter-spacing:5px;
+    font-weight:400;
+}
+.countdown-card{
+    width:760px;
+    margin:70px auto;
+    background:#fffdf8;
+    border:2px solid #d2ba7c;
+    padding:70px 50px;
+    position:relative;
+    text-align:center;
+}
+
+.countdown-card::before{
+    content:"";
+    position:absolute;
+    top:15px;
+    left:15px;
+    right:15px;
+    bottom:15px;
+    border:1px solid #e2d3ad;
+}
+
+.count-title{
+    position:relative;
+    z-index:2;
+    font-size:38px;
+    font-style:italic;
+    color:#4b4b4b;
+    margin-bottom:70px;
+}
+
+.countdown{
+    position:relative;
+    z-index:2;
+    display:flex;
+    justify-content:center;
+    align-items:center;
+    gap:35px;
+}
+
+.time-box{
+    display:flex;
+    flex-direction:column;
+    align-items:center;
+}
+
+.time-box span{
+    font-size:72px;
+    color:#243126;
+    line-height:1;
+}
+
+.time-box small{
+    margin-top:10px;
+    color:#c8a35a;
+    font-size:20px;
+    letter-spacing:4px;
+}
+
+.dot{
+    color:#d2ba7c;
+    font-size:40px;
+    margin-top:-30px;
+}
+.arabic-duaa{
+    direction: rtl;
+    text-align: center;
+    font-size: 34px;
+    color: #243126;
+    line-height: 2;
+    letter-spacing: 0;
+    margin-bottom: 50px;
+    font-family: "Amiri", serif;
+}
+.arabic-title{
+    direction: rtl;
+    text-align: center;
+    font-family: "Amiri", serif;
+    font-size: 42px;
+    color: #caa24f;   /* أصفر ذهبي */
+    margin-bottom: 15px;
+    font-weight: 700;
+}
+
+.count-subtitle{
+    direction: rtl;
+    text-align: center;
+    font-family: "Amiri", serif;
+    font-size: 28px;
+    color: #444;
+    font-style: italic;
+    margin-bottom: 70px;
+    line-height: 1.8;
+}
+.venue-card{
+    width:760px;
+    margin:70px auto;
+    background:#fffdf8;
+    border:2px solid #d2ba7c;
+    padding:35px;
+    position:relative;
+    text-align:center;
+}
+
+.venue-card::before{
+    content:"";
+    position:absolute;
+    top:15px;
+    left:15px;
+    right:15px;
+    bottom:15px;
+    border:1px solid #e2d3ad;
+    pointer-events:none;
+}
+
+.venue-image{
+    width:520px;
+    height:340px;
+    margin:20px auto 35px;
+    padding:10px;
+    border:2px solid #d2ba7c;
+    border-radius:18px;
+    background:#fff;
+    position:relative;
+    z-index:2;
+}
+
+.venue-image img{
+    width:100%;
+    height:100%;
+    object-fit:cover;
+    border-radius:12px;
+}
+
+.venue-title{
+    position:relative;
+    z-index:2;
+    font-family:"Amiri", serif;
+    font-size:48px;
+    color:#243126;
+    margin-bottom:40px;
+}
+
+.info-box{
+    position:relative;
+    z-index:2;
+    width:85%;
+    margin:20px auto;
+    padding:18px 25px;
+    background:#f9f3e7;
+    border-radius:18px;
+    display:flex;
+    flex-direction:row-reverse;
+    align-items:center;
+    justify-content:space-between;
+    box-shadow:0 2px 8px rgba(0,0,0,.08);
+}
+
+.icon{
+    width:60px;
+    height:60px;
+    border-radius:50%;
+    background:#fff;
+    display:flex;
+    align-items:center;
+    justify-content:center;
+    font-size:28px;
+    box-shadow:0 2px 8px rgba(0,0,0,.12);
+}
+
+.info-text{
+    text-align:right;
+    flex:1;
+    margin-right:20px;
+}
+
+.info-text span{
+    color:#c7a251;
+    font-size:26px;
+    font-family:"Amiri", serif;
+}
+
+.info-text p{
+    margin-top:8px;
+    font-size:28px;
+    color:#222;
+    font-family:"Amiri", serif;
+}
+.location-card{
+    width:760px;
+    margin:70px auto;
+    background:#fffdf8;
+    border:2px solid #d2ba7c;
+    padding:40px;
+    position:relative;
+    text-align:center;
+}
+
+.location-card::before{
+    content:"";
+    position:absolute;
+    top:15px;
+    left:15px;
+    right:15px;
+    bottom:15px;
+    border:1px solid #e2d3ad;
+    pointer-events:none;
+}
+
+.location-title{
+    position:relative;
+    z-index:2;
+    font-family:"Amiri", serif;
+    font-size:48px;
+    color:#caa24f;
+    margin-bottom:10px;
+}
+
+.location-subtitle{
+    position:relative;
+    z-index:2;
+    font-family:"Amiri", serif;
+    font-size:28px;
+    color:#444;
+    margin-bottom:35px;
+}
+
+.map-frame{
+    position:relative;
+    z-index:2;
+    width:600px;
+    height:380px;
+    margin:auto;
+    padding:10px;
+    border:2px solid #d2ba7c;
+    border-radius:25px;
+    background:#fff;
+    overflow:hidden;
+}
+
+.map-frame iframe{
+    width:100%;
+    height:100%;
+    border:none;
+    border-radius:18px;
+}
+
+.map-frame img{
+    width:100%;
+    border-radius:18px;
+    display:block;
+}
+
+.map-btn{
+    position:relative;
+    z-index:2;
+    display:inline-block;
+    margin-top:30px;
+    padding:18px 45px;
+    background:#4b2f1d;
+    color:#fff;
+    text-decoration:none;
+    font-size:28px;
+    border-radius:18px;
+    transition:.3s;
+    font-family:"Amiri", serif;
+}
+
+.map-btn:hover{
+    background:#6a4328;
+}
+.footer{
+    background:#4b2f1d;
+    margin-top:80px;
+    padding:60px 20px;
+    text-align:center;
+    border-radius:80px 80px 0 0;
+}
+
+.back-top{
+    text-decoration:none;
+    color:#fff;
+    font-size:34px;
+    display:inline-block;
+    margin-bottom:40px;
+    transition:.3s;
+}
+
+.back-top:hover{
+    transform:translateY(-5px);
+}
+
+.footer-logo{
+    font-family:"Cormorant Garamond", serif;
+    font-size:70px;
+    font-weight:500;
+    letter-spacing:2px;
+}
+
+.footer-logo .name{
+    color:#fff;
+}
+
+.footer-logo .gold{
+    color:#caa24f;
+    margin:0 15px;
+}
+
+.footer-line{
+    width:220px;
+    height:2px;
+    background:#caa24f;
+    margin:30px auto;
+}
+
+.footer-text{
+    color:#fff;
+    letter-spacing:6px;
+    font-size:20px;
+    text-transform:uppercase;
+    line-height:1.8;
+}

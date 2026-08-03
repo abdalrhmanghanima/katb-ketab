@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Tasneem & Waleed Wedding</title>
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+
+    <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@300;400;500;600;700&display=swap"
+        rel="stylesheet">
+
+    <link rel="stylesheet" href="welcome.css">
+</head>
+<audio id="bgMusic" loop>
+    <source src="music/song.mp3" type="audio/mpeg">
+</audio>
+
+<body>
+
+    <div id="welcomeScreen" class="welcome">
+
+        <p class="title">
+            YOU HAVE RECEIVED A KATB <br>
+            KETAB INVITATION
+        </p>
+
+        <!-- ضع اللوجو هنا -->
+        <img src="images/logo.png" class="logo" alt="Tasneem & Waleed">
+
+        <p class="tap">
+            — Tap Anywhere To Open —
+        </p>
+
+    </div>
+
+    <audio id="bgMusic">
+        <source src="music/song.mp3" type="audio/mpeg">
+    </audio>
+
+    <script>
+
+const screen = document.getElementById("welcomeScreen");
+const music = document.getElementById("bgMusic");
+
+let opened = false;
+
+screen.addEventListener("click", () => {
+
+    if(opened) return;
+    opened = true;
+
+    // تشغيل الأغنية
+    music.currentTime = 0;
+    music.play().catch(err => console.log(err));
+
+    // حركة فتح الدعوة
+    screen.classList.add("open");
+
+    // الانتقال بعد انتهاء الأنيميشن
+    setTimeout(() => {
+
+        window.location.href = "home.html";
+
+    },1200);
+
+});
+
+</script>
+
+</body>
+
+</html>

@@ -1,0 +1,220 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Tasneem & Waleed Wedding</title>
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+
+    <link href="https://fonts.googleapis.com/css2?family=Amiri:wght@400;700&family=Cormorant+Garamond:wght@300;400;500;600;700&display=swap"
+        rel="stylesheet">
+
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+
+<audio id="bgMusic" autoplay loop>
+    <source src="music/song.mp3" type="audio/mpeg">
+</audio>
+
+<section class="hero" id="top">
+
+    <div class="logo">
+        <h1>T <span>&</span> W</h1>
+    </div>
+
+    <div class="card">
+
+        <p class="family arabic-duaa">
+            بَارَكَ اللَّهُ لَكُمَا، وَبَارَكَ عَلَيْكُمَا، وَجَمَعَ بَيْنَكُمَا فِي خَيْرٍ
+        </p>
+
+        <div class="image-frame">
+            <img src="images/couple.jpeg" class="couple-image" alt="">
+        </div>
+
+        <h3 class="date">
+            AUG 19TH, 2026
+        </h3>
+
+    </div>
+
+</section>
+
+<section class="countdown-card">
+
+    <p class="count-title arabic-title">
+        العَدُّ التَّنَازُلِيُّ
+    </p>
+
+    <p class="count-subtitle">
+        بِانْتِظَارِ اللَّحْظَةِ السَّعِيدَةِ الَّتِي يَجْمَعُنَا بِهَا الْقَدَرُ بِكُلِّ حُبٍّ...
+    </p>
+
+    <div class="countdown">
+
+        <div class="time-box">
+            <span id="days">00</span>
+            <small>DAYS</small>
+        </div>
+
+        <div class="dot">•</div>
+
+        <div class="time-box">
+            <span id="hours">00</span>
+            <small>HOURS</small>
+        </div>
+
+        <div class="dot">•</div>
+
+        <div class="time-box">
+            <span id="minutes">00</span>
+            <small>MINUTES</small>
+        </div>
+
+        <div class="dot">•</div>
+
+        <div class="time-box">
+            <span id="seconds">00</span>
+            <small>SECONDS</small>
+        </div>
+
+    </div>
+
+</section>
+
+<section class="venue-card">
+
+    <div class="venue-image">
+        <img src="images/dar.jpeg" alt="">
+    </div>
+
+    <h2 class="venue-title">
+        دار المأذونية
+    </h2>
+
+    <div class="info-box">
+        <div class="icon">📍</div>
+        <div class="info-text">
+            <span>العنوان</span>
+            <p>شبين الكوم - بجوار مسجد المغفرة</p>
+        </div>
+    </div>
+
+    <div class="info-box">
+        <div class="icon">📅</div>
+        <div class="info-text">
+            <span>التاريخ</span>
+            <p>الأربعاء، 19 أغسطس 2026</p>
+        </div>
+    </div>
+
+    <div class="info-box">
+        <div class="icon">🕠</div>
+        <div class="info-text">
+            <span>الوقت</span>
+            <p>٥:٣٠ مساءً</p>
+        </div>
+    </div>
+
+</section>
+<section class="location-card">
+
+    <h2 class="location-title">
+        اللوكيشن
+    </h2>
+
+    <p class="location-subtitle">
+        لتسهيل وصولكم المباشر لدار المأذونية
+    </p>
+
+    <div class="map-frame">
+
+        <iframe
+            src="https://www.google.com/maps?q=دار%20المأذونية%20شبين%20الكوم&output=embed"
+            loading="lazy"
+            allowfullscreen>
+        </iframe>
+
+    </div>
+
+    <a class="map-btn"
+       href="https://maps.app.goo.gl/nTZEZUTaYjSLnup59?g_st=ic"
+       target="_blank">
+        🗺️ فتح عبر خرائط Google
+    </a>
+
+</section>
+
+<footer class="footer">
+
+    <a href="#top" class="back-top">▲</a>
+
+    <h1 class="footer-logo">
+        <span class="name">Tasneem</span>
+        <span class="gold">&</span>
+        <span class="name">Waleed</span>
+    </h1>
+
+    <div class="footer-line"></div>
+
+    <p class="footer-text">
+        MADE WITH LOVE FOR AUGUST 19TH, 2026
+    </p>
+
+</footer>
+
+<script>
+
+const weddingDate = new Date("August 19, 2026 17:30:00").getTime();
+
+function updateCountdown(){
+
+    const now = new Date().getTime();
+    const distance = weddingDate - now;
+
+    if(distance <= 0){
+
+        document.getElementById("days").innerHTML="00";
+        document.getElementById("hours").innerHTML="00";
+        document.getElementById("minutes").innerHTML="00";
+        document.getElementById("seconds").innerHTML="00";
+
+        return;
+
+    }
+
+    const days=Math.floor(distance/(1000*60*60*24));
+    const hours=Math.floor((distance%(1000*60*60*24))/(1000*60*60));
+    const minutes=Math.floor((distance%(1000*60*60))/(1000*60));
+    const seconds=Math.floor((distance%(1000*60))/1000);
+
+    document.getElementById("days").innerHTML=days;
+    document.getElementById("hours").innerHTML=hours;
+    document.getElementById("minutes").innerHTML=minutes;
+    document.getElementById("seconds").innerHTML=seconds;
+
+}
+
+updateCountdown();
+
+setInterval(updateCountdown,1000);
+
+const music=document.getElementById("bgMusic");
+
+if(sessionStorage.getItem("music")){
+
+    music.play().catch(()=>{});
+
+}
+
+</script>
+
+</body>
+
+</html>
